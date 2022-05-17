@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-// import { MongooseModule } from '@nestjs/mongoose';
+import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ArticlesModule } from './articles/articles.module';
@@ -11,10 +11,10 @@ import configuration from './config/configuration';
     ArticlesModule,
     ConfigModule.forRoot({
       envFilePath: `.env`,
-      load: [configuration],
       isGlobal: true,
     }),
-    // MongooseModule.forRoot(configuration.mongoUri, { useNewUrlParser: true }),
+
+    MongooseModule.forRoot(process.env.DATABASE_URI, { useNewUrlParser: true }),
   ],
   controllers: [AppController],
   providers: [AppService],

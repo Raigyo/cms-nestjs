@@ -1,3 +1,11 @@
+# Nest JS & Angular:
+
+_May 2022_
+
+> 🔨 Nest JS & Angular - CMS. From udemy: [Créer une app FullStack TypeScript avec Angular et NestJS](https://www.udemy.com/course/creer-une-app-fullstack-typescript-avec-angular-et-nestjs).
+
+---
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -26,7 +34,7 @@
 $ npm install
 ```
 
-## Running the app
+## Running the app (Nest JS)
 
 ```bash
 # development
@@ -40,6 +48,8 @@ $ npm run start:prod
 ```
 
 Launch: [http://localhost:3000/](http://localhost:3000/)
+
+## Running the app (Angular)
 
 ## Dependancies
 
