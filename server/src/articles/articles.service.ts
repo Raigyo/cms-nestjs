@@ -13,4 +13,7 @@ export class ArticlesService {
     const createdArticle = new this.articleModel(createArticleDto);
     return await createdArticle.save();
   }
+  async findAll(): Promise<Article[]> {
+    return await this.articleModel.find().exec();
+  }
 }

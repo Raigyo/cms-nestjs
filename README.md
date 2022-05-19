@@ -16,22 +16,37 @@ _May 2022_
 $ npm install
 ```
 
-## Running the app (Nest JS)
+## Running the app (Nest JS: Server)
 
 ```bash
 # development
+$ cd server
 $ npm run start
 
 # watch mode
+$ cd server
 $ npm run start:dev
 
 # production mode
+$ cd server
 $ npm run start:prod
 ```
 
 Launch: [http://localhost:3000/](http://localhost:3000/)
 
-## Running the app (Angular)
+## Running the app (Angular: Client)
+
+```bash
+# development
+$ cd client
+$ npm run start
+
+# production mode
+$ cd client
+$ npm run build
+```
+
+Launch: [http://localhost:4200/](http://localhost:4200/)
 
 ## Dependancies
 
@@ -50,7 +65,11 @@ NB:
 
 ## Useful links
 
-- [Environment configuration](https://docs.nestjs.com/techniques/configuration)
+- [codeconcept/cms-nestjs](https://github.com/codeconcept/cms-nestjs)
+- [codeconcept/cms-nestjs-ng](https://github.com/codeconcept/cms-nestjs-ng)
+- [Nest: Environment configuration](https://docs.nestjs.com/techniques/configuration)
+- [Angular: Jasmine core problem](https://stackoverflow.com/questions/67433893/unable-to-resolve-dependency-tree-error-for-creating-new-angular-project)
+- [Angular Building blocks](https://slides.com/sajeetharan/deck-62536557-5a27-40cd-a98e-3fc7f3c6517a-11-10#/14)
 
 ## License
 
