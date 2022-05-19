@@ -48,7 +48,7 @@ $ npm run build
 
 Launch: [http://localhost:4200/](http://localhost:4200/)
 
-## Dependancies
+## Dependancies: Nest JS
 
 - [@nestjs/mongoose](https://www.npmjs.com/package/@nestjs/mongoose): Mongoose module for Nest.
 

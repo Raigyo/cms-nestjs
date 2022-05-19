@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-articles',
@@ -13,7 +14,7 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit(): void {
     this.articles$ = this.httpClient.get<any[]>(
-      'http://localhost:3000/articles'
+      environment.API_URL + '/articles'
     );
   }
 }
