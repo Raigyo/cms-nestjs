@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ArticleService } from '../article.service';
 
 @Component({
@@ -17,8 +16,8 @@ export class ArticleNewComponent implements OnInit {
   ) {}
 
   articleForm: FormGroup = this.fb.group({
-    title: [''],
-    content: [''],
+    title: ['', Validators.required],
+    content: ['', Validators.required, Validators.minLength(4)],
   });
 
   ngOnInit(): void {}
@@ -28,5 +27,13 @@ export class ArticleNewComponent implements OnInit {
     this.response$ = this.articleService
       .createArticle(this.articleForm.value)
       .subscribe((res) => console.log(res));
+  }
+
+  get title() {
+    return this.articleForm.get('title');
+  }
+
+  get content() {
+    return this.articleForm.get('content');
   }
 }

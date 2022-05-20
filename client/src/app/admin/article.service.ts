@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Article } from '../models/article';
 
 @Injectable({
   providedIn: 'root',
@@ -8,8 +9,8 @@ import { environment } from '../../environments/environment';
 export class ArticleService {
   constructor(private httpClient: HttpClient) {}
 
-  createArticle(article: any) {
-    return this.httpClient.post<any>(
+  createArticle(article: Article) {
+    return this.httpClient.post<Article>(
       environment.API_URL + '/articles',
       article
     );
