@@ -68,6 +68,7 @@ NB:
 - [codeconcept/cms-nestjs](https://github.com/codeconcept/cms-nestjs)
 - [codeconcept/cms-nestjs-ng](https://github.com/codeconcept/cms-nestjs-ng)
 - [Nest: Environment configuration](https://docs.nestjs.com/techniques/configuration)
+- [Nest.js | Middleware, Pipes & Interceptors Explained By Example](https://www.youtube.com/watch?v=x1W3FJ1RJlM&ab_channel=MichaelGuay)
 - [Angular: Jasmine core problem](https://stackoverflow.com/questions/67433893/unable-to-resolve-dependency-tree-error-for-creating-new-angular-project)
 - [Angular Building blocks](https://slides.com/sajeetharan/deck-62536557-5a27-40cd-a98e-3fc7f3c6517a-11-10#/14)
 

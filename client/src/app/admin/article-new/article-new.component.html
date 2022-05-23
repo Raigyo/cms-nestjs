@@ -1,4 +1,11 @@
 <h3>Create new article</h3>
+<div *ngIf="(response$ | async) as res">
+  {{ res | json }}
+</div>
+<div *ngIf="error" class="alert alert-danger">
+  An error occured. Please try again later.
+  {{ error | json }}
+</div>
 <form [formGroup]="articleForm" (ngSubmit)="submit()">
   <div class="form-group">
     <label for="title">Article title</label>
