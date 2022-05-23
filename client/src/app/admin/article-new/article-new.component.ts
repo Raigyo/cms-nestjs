@@ -17,7 +17,7 @@ export class ArticleNewComponent implements OnInit {
 
   articleForm: FormGroup = this.fb.group({
     title: ['', Validators.required],
-    content: ['', Validators.required, Validators.minLength(4)],
+    content: ['', [Validators.required, Validators.minLength(4)]],
   });
 
   ngOnInit(): void {}
