@@ -10,11 +10,15 @@ import { environment } from '../../environments/environment';
 })
 export class ArticlesComponent implements OnInit {
   articles$: Observable<any[]> | undefined;
+  fullURL = environment.API_URL;
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {
-    this.articles$ = this.httpClient.get<any[]>(
-      environment.API_URL + '/articles'
-    );
+    this.articles$ = this.httpClient.get<any[]>(this.fullURL + '/articles');
+  }
+
+  reloadArticles(deletionSuccess: any) {
+    console.log('deletion successful', deletionSuccess);
+    this.articles$ = this.httpClient.get<any[]>(this.fullURL + '/articles');
   }
 }

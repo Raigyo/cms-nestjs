@@ -14,7 +14,9 @@ import configuration from './config/configuration';
       isGlobal: true,
     }),
 
-    MongooseModule.forRoot(process.env.DATABASE_URI, { useNewUrlParser: true }),
+    MongooseModule.forRoot(process.env.DATABASE_URI, {
+      useNewUrlParser: true,
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Article } from '../models/article';
 
@@ -7,12 +7,18 @@ import { Article } from '../models/article';
   providedIn: 'root',
 })
 export class ArticleService {
+  private baseURL = environment.API_URL;
+  private httpHeaders = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
   constructor(private httpClient: HttpClient) {}
 
   createArticle(article: Article) {
-    return this.httpClient.post<Article>(
-      environment.API_URL + '/articles',
-      article
-    );
+    const fullURL = `${this.baseURL}/articles`;
+    return this.httpClient.post<Article>(fullURL, article, this.httpHeaders);
+  }
+  deleteArticle(article: Article) {
+    const fullURL = `${this.baseURL}/articles/${article._id}`;
+    return this.httpClient.delete<Article>(fullURL, this.httpHeaders);
   }
 }

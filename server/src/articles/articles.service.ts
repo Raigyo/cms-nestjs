@@ -16,4 +16,7 @@ export class ArticlesService {
   async findAll(): Promise<Article[]> {
     return await this.articleModel.find().sort({ creationDate: -1 }).exec();
   }
+  async delete(id: string): Promise<Article> {
+    return await this.articleModel.findByIdAndRemove(id);
+  }
 }
