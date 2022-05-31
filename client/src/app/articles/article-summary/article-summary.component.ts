@@ -12,9 +12,11 @@ import { throwError } from 'rxjs';
 export class ArticleSummaryComponent implements OnInit {
   isWaitingForServerResponse = false;
   error = null;
+
   @Output() deleteSuccess = new EventEmitter<boolean>();
   @Input()
   article!: Article;
+  isInEditMode = false;
   constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {}
@@ -34,6 +36,15 @@ export class ArticleSummaryComponent implements OnInit {
         }
       );
   }
+
+  toggleReadMode() {
+    this.isInEditMode = !this.isInEditMode;
+  }
+
+  // reloadArticle(article: Article) {
+  //   console.log(article);
+  //   this.article = article;
+  // }
 
   handleError(err: null) {
     this.error = err;

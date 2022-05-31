@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ArticlesModule } from './articles/articles.module';
+import { UsersModule } from './users/users.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -17,6 +18,8 @@ import configuration from './config/configuration';
     MongooseModule.forRoot(process.env.DATABASE_URI, {
       useNewUrlParser: true,
     }),
+
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

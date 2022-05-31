@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateArticleDto } from './dto/create-article.dto';
+import { UpdateArticleDto } from './dto/update-article.dto';
 import { Article } from './interfaces/article.interface';
 
 @Injectable()
@@ -18,5 +19,13 @@ export class ArticlesService {
   }
   async delete(id: string): Promise<Article> {
     return await this.articleModel.findByIdAndRemove(id);
+  }
+
+  async update(id: string, article: UpdateArticleDto) {
+    const updatedArticle = this.articleModel.findByIdAndUpdate(id, article, {
+      new: true,
+    });
+    console.log(updatedArticle);
+    return updatedArticle;
   }
 }

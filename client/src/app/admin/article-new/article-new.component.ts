@@ -28,7 +28,7 @@ export class ArticleNewComponent implements OnInit {
 
   async submit(): Promise<void> {
     console.log('article submit: ', this.articleForm.value);
-    this.response$ = this.articleService
+    this.response$ = await this.articleService
       .createArticle(this.articleForm.value)
       .pipe(
         catchError((error) => {

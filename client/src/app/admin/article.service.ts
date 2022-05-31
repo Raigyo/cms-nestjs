@@ -21,4 +21,9 @@ export class ArticleService {
     const fullURL = `${this.baseURL}/articles/${article._id}`;
     return this.httpClient.delete<Article>(fullURL, this.httpHeaders);
   }
+
+  updateArticle(articleId: string, article: Article) {
+    const fullUrl = `${this.baseURL}/articles/${articleId}`;
+    return this.httpClient.put<Article>(fullUrl, article, this.httpHeaders);
+  }
 }

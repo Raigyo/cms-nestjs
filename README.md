@@ -48,6 +48,14 @@ $ npm run build
 
 Launch: [http://localhost:4200/](http://localhost:4200/)
 
+## CRUD Test (using Curl)
+
+### Put
+
+```bash
+curl -X PUT http://localhost:3000/articles/628b9d3d0fc27e880b8f308b -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"title": "Last article edit2", "content":"Last article edit2"}'
+```
+
 ## Dependancies: Nest JS
 
 - [@nestjs/mongoose](https://www.npmjs.com/package/@nestjs/mongoose): Mongoose module for Nest.
