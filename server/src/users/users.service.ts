@@ -12,7 +12,11 @@ export class UsersService {
   // we create a new user and save it in data base
   async create(CreateUserDto: CreateUserDto): Promise<User> {
     const createdUser = new this.userModel(CreateUserDto);
-    // we return a promise ow user
+    // we return a promise to save the user
     return await createdUser.save();
+  }
+
+  async findOne(email: string): Promise<User> {
+    return await this.userModel.findOne({ email }).exec();
   }
 }
