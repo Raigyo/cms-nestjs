@@ -1,6 +1,6 @@
 # Nest JS & Angular: CMS
 
-_May 2022_
+_May - June 2022_
 
 > 🔨 Nest JS & Angular - CMS. From udemy: [Créer une app FullStack TypeScript avec Angular et NestJS](https://www.udemy.com/course/creer-une-app-fullstack-typescript-avec-angular-et-nestjs).
 
@@ -9,6 +9,10 @@ _May 2022_
 <h1 align="center">
     <img src="_readme-img/logo.png">
 </h1>
+
+![capture vscode](_readme-img/capture-vsc-nest.jpg)
+
+![capture vscode](_readme-img/capture-vsc-angular.jpg)
 
 ## Nest JS: Server
 
