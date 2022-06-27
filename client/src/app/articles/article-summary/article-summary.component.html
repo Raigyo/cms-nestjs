@@ -7,9 +7,9 @@
       <div class="mb-1 text-muted">{{article.creationDate}}</div>
       <p class="card-text mb-auto">{{article.content}}</p>
       <a href="#">Continue reading</a>
-      <button class="btn btn-warning m-2" (click)="toggleReadMode()">Update
+      <button class="btn btn-warning m-2" (click)="toggleReadMode()" *ngIf="authService.isAdmin">Update
         article</button>
-      <button class="btn btn-danger m-2" (click)="delete(article)">Delete
+      <button class="btn btn-danger m-2" (click)="delete(article)" *ngIf="authService.isAdmin">Delete
         article</button>
       <span *ngIf="isWaitingForServerResponse">please wait...</span>
       <div *ngIf="error">{{error | json}}</div>
